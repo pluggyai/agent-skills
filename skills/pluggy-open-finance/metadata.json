@@ -1,0 +1,8 @@
+{
+  "name": "pluggy-open-finance",
+  "version": "1.0.0",
+  "description": "Best practices for Open Finance data retrieval and management",
+  "author": "Pluggy",
+  "license": "MIT",
+  "keywords": ["pluggy", "open-finance", "accounts", "transactions", "investments"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "pluggy-integration",
+  "version": "1.0.0",
+  "description": "Core Pluggy integration patterns and best practices",
+  "author": "Pluggy",
+  "license": "MIT",
+  "keywords": ["pluggy", "open-finance", "integration", "connect-widget", "webhooks"]
+}

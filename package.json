@@ -1,0 +1,35 @@
+{
+  "name": "@pluggy/agent-skills",
+  "version": "1.0.0",
+  "description": "Agent Skills for integrating Pluggy Open Finance solutions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggy/agent-skills"
+  },
+  "keywords": [
+    "pluggy",
+    "open-finance",
+    "agent-skills",
+    "claude",
+    "ai",
+    "fintech",
+    "pix",
+    "banking"
+  ],
+  "author": "Pluggy",
+  "license": "MIT",
+  "homepage": "https://pluggy.ai",
+  "bugs": {
+    "url": "https://github.com/pluggy/agent-skills/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build-agents.js",
+    "validate": "node scripts/validate-rules.js",
+    "prebuild": "npm run validate"
+  },
+  "files": [
+    "skills",
+    "README.md",
+    "AGENTS.md"
+  ]
+}

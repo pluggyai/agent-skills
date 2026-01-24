@@ -1,0 +1,8 @@
+{
+  "name": "pluggy-payments",
+  "version": "1.0.0",
+  "description": "Payment initiation with PIX, Boleto, and Smart Transfers",
+  "author": "Pluggy",
+  "license": "MIT",
+  "keywords": ["pluggy", "payments", "pix", "boleto", "smart-transfers", "brazil"]
+}
