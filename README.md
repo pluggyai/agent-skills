@@ -7,16 +7,7 @@ The skills in this repo follow the [Agent Skills](https://agentskills.io/) forma
 ## Installation
 
 ```bash
-npx skills add pluggy/agent-skills
-```
-
-### Claude Code Plugin
-
-You can also install the skills in this repo as Claude Code plugins:
-
-```bash
-/plugin marketplace add pluggy/agent-skills
-/plugin install pluggy-integration@pluggy-agent-skills
+npx skills add pluggyai/agent-skills
 ```
 
 ## Available Skills
