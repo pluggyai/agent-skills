@@ -91,18 +91,17 @@ Code-reviews an existing Pluggy integration against Pluggy's official documentat
 - Reviewing or diagnosing an existing Pluggy integration before going live
 - Asking "is this ready for production?" / "tá tudo certo pra ir pra produção?"
 - Validating credential security, connect tokens, and webhook handling
-- Checking whether webhooks, health checks, and environments follow the docs
+- Checking whether webhooks, sync strategy, and environments follow the docs
 
 **Areas covered:**
 
 - Credential security
 - Connect Token & clientUserId
 - Webhooks configuration & correct handling
-- Health check (no polling)
-- Individual processing (no batch)
+- Sync strategy (rely on auto-sync, no self-driven updates)
 - Environment (sandbox vs production)
 
-> Output is delivered in Brazilian Portuguese (PT-BR).
+> Output mirrors the dev's language.
 
 </details>
 

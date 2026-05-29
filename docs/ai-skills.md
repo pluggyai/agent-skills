@@ -12,7 +12,7 @@ The skills follow the open [Agent Skills](https://agentskills.io/) format and ar
 
 > 📘 **Skills vs. MCP**
 >
-> The **[MCP Server](https://docs.pluggy.ai/docs/mcp)** gives an agent live access to Pluggy's documentation and API reference at runtime. **Skills** give the agent the know-how — the patterns, do's, and don'ts — for using Pluggy correctly. They work great together: some skills (like Pluggy Doctor) query the docs through the MCP while they work.
+> The **[MCP Server](https://docs.pluggy.ai/docs/mcp)** gives an agent live access to Pluggy's documentation and API reference at runtime. **Skills** give the agent the know-how — the patterns, do's, and don'ts — for using Pluggy correctly. They're independent: skills work on their own, with no MCP required. They also work great together — Pluggy Doctor, for example, validates against the docs through the MCP when it's connected (and falls back to the public web docs when it isn't).
 
 ## Installation
 
@@ -22,7 +22,13 @@ Install all Pluggy skills into your project with a single command:
 npx skills add pluggyai/agent-skills
 ```
 
-Once installed, the skills are available automatically. Your agent loads the relevant one whenever it detects a matching task — you don't need to invoke them by hand.
+Once installed, the skills are available automatically. Your agent loads the relevant one whenever it detects a matching task — you don't need to invoke them by hand. **No MCP is required** — the skills are self-contained.
+
+> 💡 **Optional, recommended for Pluggy Doctor:** connect the Pluggy Docs MCP so the reviewer validates against the live docs. If you skip this, Pluggy Doctor falls back to the public docs over the web.
+>
+> ```bash
+> claude mcp add --transport http pluggy-docs https://docs.pluggy.ai/mcp
+> ```
 
 ## Available skills
 
@@ -135,7 +141,7 @@ Track payment status with webhooks
 
 A reviewer skill that **code-reviews an existing Pluggy integration** and tells you whether it's ready for production. Unlike the other skills (which help you *build*), Pluggy Doctor *evaluates* code you already wrote.
 
-It diagnoses against Pluggy's **official documentation, queried in real time through the [Pluggy MCP](https://docs.pluggy.ai/docs/mcp)** — never from memory or a frozen checklist — and returns a structured report with a fix for each issue.
+It diagnoses against Pluggy's **official documentation** — never from memory or a frozen checklist — and returns a structured report with a fix for each issue. It reads the docs through the [Pluggy MCP](https://docs.pluggy.ai/docs/mcp) when it's connected, and **falls back to reading the same public docs over the web** (`docs.pluggy.ai`) when it isn't — so **the skill works with or without the MCP**. If it can't confirm a criterion against the docs, it marks it "not verified" instead of guessing.
 
 **Use when you:**
 
@@ -150,13 +156,12 @@ It diagnoses against Pluggy's **official documentation, queried in real time thr
 - Connect Token & `clientUserId`
 - Webhooks — configuration
 - Webhooks — correct handling (item status, `PARTIAL_SUCCESS`, two-way sync)
-- Health check (no continuous polling)
-- Individual processing (no batch)
+- Sync strategy — rely on auto-sync, no self-driven updates
 - Environment (sandbox vs. production)
 
 **What you get back:** a per-area report classifying each item as ✅ correct, ❌ problem (with file, line, and a paste-ready fix), ⚠️ heads-up, or ➖ not applicable — closing with a clear 🟢 production-ready or 🔴 not-yet verdict.
 
-> 📘 The diagnostic report is delivered in **Brazilian Portuguese (PT-BR)**.
+> 📘 The diagnostic report mirrors the dev's language.
 
 **Example prompts:**
 
