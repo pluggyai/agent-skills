@@ -47,18 +47,17 @@ Payment initiation with PIX, Boleto, and Smart Transfers.
 
 ### pluggy-doctor
 
-Reviewer skill (no rule files): code-reviews an existing Pluggy integration against the official docs (queried in real time via the Pluggy MCP) and returns a diagnostic report with paste-ready fixes. Output in PT-BR.
+Reviewer skill (no rule files): code-reviews an existing Pluggy integration against the official docs (via the Pluggy MCP, with a web fallback to `docs.pluggy.ai` when the MCP isn't connected) and returns a diagnostic report with paste-ready fixes. Output mirrors the dev's language.
 
 **Coverage areas:**
 - Credential security
 - Connect Token & clientUserId
 - Webhooks — configuration
 - Webhooks — correct handling
-- Health check (no polling)
-- Individual processing (no batch)
+- Sync strategy (rely on auto-sync, no self-driven updates)
 - Environment (sandbox vs production)
 
-See `skills/pluggy-doctor/SKILL.md` and `skills/pluggy-doctor/checklist.md`.
+See `skills/pluggy-doctor/SKILL.md`.
 
 ## Quick Start
 

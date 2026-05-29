@@ -150,13 +150,12 @@ It diagnoses against Pluggy's **official documentation, queried in real time thr
 - Connect Token & `clientUserId`
 - Webhooks — configuration
 - Webhooks — correct handling (item status, `PARTIAL_SUCCESS`, two-way sync)
-- Health check (no continuous polling)
-- Individual processing (no batch)
+- Sync strategy — rely on auto-sync, no self-driven updates
 - Environment (sandbox vs. production)
 
 **What you get back:** a per-area report classifying each item as ✅ correct, ❌ problem (with file, line, and a paste-ready fix), ⚠️ heads-up, or ➖ not applicable — closing with a clear 🟢 production-ready or 🔴 not-yet verdict.
 
-> 📘 The diagnostic report is delivered in **Brazilian Portuguese (PT-BR)**.
+> 📘 The diagnostic report mirrors the dev's language.
 
 **Example prompts:**
 
