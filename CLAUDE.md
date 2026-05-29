@@ -7,6 +7,7 @@ This repository contains Agent Skills for integrating Pluggy Open Finance soluti
 - **pluggy-integration**: Core integration patterns (authentication, Connect Widget, webhooks)
 - **pluggy-open-finance**: Open Finance data retrieval (accounts, transactions, investments)
 - **pluggy-payments**: Payment initiation (PIX, Boleto, Smart Transfers)
+- **pluggy-doctor**: Code-reviews an existing integration against the official docs (via Pluggy MCP) and returns a diagnostic report with fixes
 
 ## Quick Reference
 

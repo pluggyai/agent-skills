@@ -45,6 +45,21 @@ Payment initiation with PIX, Boleto, and Smart Transfers.
 - `boleto-management` - Manage Boletos Correctly (MEDIUM)
 - `schedule-payments` - Implement Scheduled Payments (PIX Agendado) (MEDIUM)
 
+### pluggy-doctor
+
+Reviewer skill (no rule files): code-reviews an existing Pluggy integration against the official docs (queried in real time via the Pluggy MCP) and returns a diagnostic report with paste-ready fixes. Output in PT-BR.
+
+**Coverage areas:**
+- Credential security
+- Connect Token & clientUserId
+- Webhooks — configuration
+- Webhooks — correct handling
+- Health check (no polling)
+- Individual processing (no batch)
+- Environment (sandbox vs production)
+
+See `skills/pluggy-doctor/SKILL.md` and `skills/pluggy-doctor/checklist.md`.
+
 ## Quick Start
 
 ```typescript

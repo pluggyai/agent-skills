@@ -81,6 +81,31 @@ Payment initiation with PIX, Boleto, and Smart Transfers.
 
 </details>
 
+<details>
+<summary><strong>pluggy-doctor</strong></summary>
+
+Code-reviews an existing Pluggy integration against Pluggy's official documentation (queried in real time via the Pluggy MCP) and returns a diagnostic report (✅/❌/⚠️) with file, line, and a paste-ready fix for each issue.
+
+**Use when:**
+
+- Reviewing or diagnosing an existing Pluggy integration before going live
+- Asking "is this ready for production?" / "tá tudo certo pra ir pra produção?"
+- Validating credential security, connect tokens, and webhook handling
+- Checking whether webhooks, health checks, and environments follow the docs
+
+**Areas covered:**
+
+- Credential security
+- Connect Token & clientUserId
+- Webhooks configuration & correct handling
+- Health check (no polling)
+- Individual processing (no batch)
+- Environment (sandbox vs production)
+
+> Output is delivered in Brazilian Portuguese (PT-BR).
+
+</details>
+
 ## Usage
 
 Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
