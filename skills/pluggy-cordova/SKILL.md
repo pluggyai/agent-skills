@@ -29,7 +29,7 @@ Do **not** apply this skill for:
 ## Prerequisites
 
 - A Cordova 11+ project (`cordova-ios` ≥ 7.0 / `cordova-android` ≥ 12.0).
-- A backend endpoint that issues a Pluggy **connect token** from your Client ID and Client Secret. The Connect Widget must never see your `CLIENT_SECRET`. See [`pluggy-integration`](../pluggy-integration/SKILL.md) for the backend pattern, and the [`vercel-node-connect-token`](https://github.com/pluggyai/quickstart/tree/master/examples/vercel-node-connect-token) example for a minimal Vercel implementation.
+- A backend endpoint that issues a Pluggy **connect token** from your Client ID and Client Secret. The Connect Widget must never see your `CLIENT_SECRET`. See [`pluggy-integration`](../pluggy-integration/SKILL.md) for the backend pattern, and the [`backend-connect-token`](https://github.com/pluggyai/quickstart/blob/master/prompts/backend-connect-token.md) prompt to have a coding agent add that endpoint to your backend.
 
 ## Rule Categories by Priority
 
@@ -82,7 +82,7 @@ Each rule file contains:
 
 - [`pluggy-integration`](../pluggy-integration/SKILL.md) — backend token endpoint, item lifecycle, webhooks. Read this first if the user hasn't already.
 - [`pluggy-open-finance`](../pluggy-open-finance/SKILL.md) — how to consume the data after the connection succeeds.
-- [`pluggyai/quickstart`](https://github.com/pluggyai/quickstart) — full backend examples (Vercel, NestJS, AWS SST, Java) that pair with this skill.
+- [`pluggyai/quickstart`](https://github.com/pluggyai/quickstart) — the reference app and the prompts (token endpoint, webhooks, data sync) that pair with this skill.
 - [Pluggy Connect Widget reference](https://docs.pluggy.ai/#pluggy-connect-widget).
 
 ## Full Compiled Document

@@ -1,0 +1,8 @@
+{
+  "name": "pluggy-doctor",
+  "version": "1.0.0",
+  "description": "Code-reviews Pluggy API integrations against the official docs and returns a diagnostic report with fixes",
+  "author": "Pluggy",
+  "license": "MIT",
+  "keywords": ["pluggy", "open-finance", "code-review", "diagnostics", "integration", "webhooks", "production-readiness"]
+}

@@ -45,6 +45,29 @@ Payment initiation with PIX, Boleto, and Smart Transfers.
 - `boleto-management` - Manage Boletos Correctly (MEDIUM)
 - `schedule-payments` - Implement Scheduled Payments (PIX Agendado) (MEDIUM)
 
+### pluggy-doctor
+
+Reviewer skill (no rule files): code-reviews an existing Pluggy integration against the official docs (via the Pluggy MCP, with a web fallback to `docs.pluggy.ai` when the MCP isn't connected) and returns a diagnostic report with paste-ready fixes. Output mirrors the dev's language.
+
+**Coverage areas:**
+- Credential security
+- Connect Token & clientUserId
+- Webhooks — configuration
+- Webhooks — correct handling
+- Sync strategy (rely on auto-sync, no self-driven updates)
+- Environment (sandbox vs production)
+
+See `skills/pluggy-doctor/SKILL.md`.
+
+### pluggy-cordova
+
+Pluggy Connect Widget inside an existing Apache Cordova app (iOS / Android).
+
+**Rules:**
+- `cordova-webview-config` - Configure the WebView: CSP and `allow-navigation` (CRITICAL)
+- `cordova-widget-init` - Initialize the Widget on `deviceready` (CRITICAL)
+- `cordova-data-flow` - Connect Token in, API Key on the Backend (CRITICAL)
+
 ## Quick Start
 
 ```typescript
