@@ -59,6 +59,15 @@ Reviewer skill (no rule files): code-reviews an existing Pluggy integration agai
 
 See `skills/pluggy-doctor/SKILL.md`.
 
+### pluggy-cordova
+
+Pluggy Connect Widget inside an existing Apache Cordova app (iOS / Android).
+
+**Rules:**
+- `cordova-webview-config` - Configure the WebView: CSP and `allow-navigation` (CRITICAL)
+- `cordova-widget-init` - Initialize the Widget on `deviceready` (CRITICAL)
+- `cordova-data-flow` - Connect Token in, API Key on the Backend (CRITICAL)
+
 ## Quick Start
 
 ```typescript

@@ -105,6 +105,26 @@ Code-reviews an existing Pluggy integration against Pluggy's official documentat
 
 </details>
 
+<details>
+<summary><strong>pluggy-cordova</strong></summary>
+
+Embed the Pluggy Connect Widget in an existing Apache Cordova app (iOS / Android).
+
+**Use when:**
+
+- Adding Pluggy to a Cordova-based hybrid app
+- Configuring the Cordova WebView to host the Connect Widget
+- Wiring `deviceready` → connect-token → `PluggyConnect.init()`
+- Keeping the API key off the device
+
+**Categories covered:**
+
+- WebView configuration: CSP + `allow-navigation` (Critical)
+- Widget initialization on `deviceready` (Critical)
+- Token + data flow: connect token in, API key on the backend (Critical)
+
+</details>
+
 ## Usage
 
 Skills are automatically available once installed. The agent will use them when relevant tasks are detected.

@@ -1,0 +1,8 @@
+{
+  "name": "pluggy-cordova",
+  "version": "1.0.0",
+  "description": "Add the Pluggy Connect Widget to an Apache Cordova app (iOS / Android)",
+  "author": "Pluggy",
+  "license": "MIT",
+  "keywords": ["pluggy", "open-finance", "cordova", "connect-widget", "hybrid", "ios", "android"]
+}
